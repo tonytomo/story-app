@@ -21,6 +21,7 @@ class _TextOnlyState extends State<TextOnly> {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              Container(),
               // TextArea
               Container(
                 padding: EdgeInsets.all(8),

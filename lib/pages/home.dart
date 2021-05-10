@@ -19,17 +19,37 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text('Villain Story'),
+      ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              child: Text("Villain Story"),
+            OutlinedButton(
+              child: Text(
+                "START GAME",
+                style: TextStyle(color: Colors.black),
+              ),
+              onPressed: () {
+                startGame();
+              },
             ),
             OutlinedButton(
-              child: Text("start game"),
+              child: Text(
+                "OPTIONS",
+                style: TextStyle(color: Colors.black),
+              ),
+              onPressed: () {
+                startGame();
+              },
+            ),
+            OutlinedButton(
+              child: Text(
+                "CREDITS",
+                style: TextStyle(color: Colors.black),
+              ),
               onPressed: () {
                 startGame();
               },
@@ -37,11 +57,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ),
     );
   }
 }
