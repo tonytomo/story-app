@@ -19,15 +19,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(top: 20, bottom: 20),
+              child: Text("Villain Story"),
+            ),
             OutlinedButton(
-              child: Text("Start game"),
+              child: Text("start game"),
               onPressed: () {
                 startGame();
               },

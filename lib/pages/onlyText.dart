@@ -11,18 +11,6 @@ class TextOnly extends StatefulWidget {
 }
 
 class _TextOnlyState extends State<TextOnly> {
-  int _radioValue1 = -1;
-  int _radioValue2 = -1;
-  int _radioValue3 = -1;
-  int _radioValue4 = -1;
-  int _radioValue5 = -1;
-
-  void _handleRadioValueChange1(int value) {}
-
-  void _nextPage(int value) {
-    // Contains conditional if-else
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,16 +39,7 @@ class _TextOnlyState extends State<TextOnly> {
               Container(
                 padding: EdgeInsets.all(20),
                 child: Column(
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Radio(
-                            value: 0,
-                            groupValue: _radioValue1,
-                            onChanged: _handleRadioValueChange1)
-                      ],
-                    )
-                  ],
+                  children: <Widget>[],
                 ),
               ),
               OutlinedButton(
