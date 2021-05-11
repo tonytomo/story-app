@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:story_app/pages/storypage.dart';
 import 'onlyText.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   void startGame() {
     Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (context) => TextOnly(title: 'Stories')));
+        MaterialPageRoute(builder: (context) => StoryPage(title: 'Stories')));
   }
 
   @override

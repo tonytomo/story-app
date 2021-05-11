@@ -3,10 +3,12 @@ import 'pages/home.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
+import 'models/scene.dart';
+
 List<Box> boxList = [];
 Future<List<Box>> _openBox() async {
-  // var boxHistory = await Hive.openBox('history');
-  // boxList.add(boxHistory);
+  var boxHistory = await Hive.openBox('scene');
+  boxList.add(boxHistory);
   return boxList;
 }
 
@@ -15,7 +17,7 @@ void main() async {
   final appDirectory = await path_provider.getApplicationDocumentsDirectory();
   Hive.init(appDirectory.path);
 
-  // Hive.registerAdapter(HistoryAdapter());
+  Hive.registerAdapter(SceneAdapter());
 
   runApp(MaterialApp(home: MyApp()));
 }

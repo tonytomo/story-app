@@ -3,16 +3,16 @@ import 'package:hive/hive.dart';
 
 import 'package:story_app/models/scene.dart';
 
-class TextOnly extends StatefulWidget {
-  TextOnly({Key key, this.title}) : super(key: key);
+class StoryPage extends StatefulWidget {
+  StoryPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _TextOnlyState createState() => _TextOnlyState();
+  _StoryPageState createState() => _StoryPageState();
 }
 
-class _TextOnlyState extends State<TextOnly> {
+class _StoryPageState extends State<StoryPage> {
   final sceneBox = Hive.box('scene');
   int index = 0;
 
